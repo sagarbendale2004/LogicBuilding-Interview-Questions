@@ -140,3 +140,178 @@
 
 //----------------------------------------------------------------------------------------------------------------------------------------
 
+// 11. write a function that takes a number as input and return the sum of its digits.
+
+// function sumOfDigits(num) {
+//     let number = Array.from(String(num), Number);
+//     return number.reduce((prev, curr) => prev += curr);
+// }
+
+// console.log(sumOfDigits(9232));
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// 12. write a function that takes an array of an integers as input and removes any duplicate elements, returning a new array with only the unique elements.
+
+// function removeDuplicates(arr) {
+//     let arr1 = new Set([...arr]);
+//     return arr1
+// }
+
+// console.log(removeDuplicates([1,2,3,4,4,53,3,6]));
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// 13. write a function that takes a string as input and returns the count of vovels in that string. consider 'a','e','i','o','u'.
+
+// function countVovels(str) {
+//     let count = 0;
+//     let vovels = ['a','e','i','o','u'];
+//     let cleanStr = str.split('');
+//     cleanStr.forEach(elem => {
+//         if(vovels.includes(elem)) {
+//             count++;
+//         }
+//     });
+//     return count;
+// }
+
+// console.log(countVovels('hello world'))
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// 14. write a function called isPowerOfTwo that takes an integer num as input and returns true if num is a power of two ,and false otherwise.
+
+// function isPowerOfTwo(num) {
+//     let opt = false;
+//     for (let i = 0; i < num; i++) {
+//         if(2**i === num){
+//             opt = true
+//         }
+//     }
+//     return opt;
+// }
+
+// console.log(isPowerOfTwo(64));
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// 15. write a function to calculate the sum of squares of all elements in an array. for example, given the array [1,3,4] the function should return 26 bcz 1*1, 3*3, 4*4 = 1 + 9 + 16 = 26.
+
+
+// function sumOfSquare(arr) {
+//     return arr.reduce((prev, curr) => prev += curr*curr);
+// }
+
+// OR
+
+// function sumOfSquare(arr) {
+//     let total = 0
+//     let arr2 = [];
+//     arr.map((elem) => {
+//        return arr2.push(elem*elem);
+//     })
+//     arr2.forEach((elem) => {
+//         total += elem
+//     })
+//     return total
+// }
+
+//console.log(sumOfSquare([1,2,3,4,5,6])); 
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// 16. write a function to findMin that takes an array of numbers as input and returns the minimunm value found in an array.
+
+// function findMin(arr) {
+//     return arr.reduce((prev, curr) => {
+//        return prev < curr ? prev:curr;
+//     })
+// }
+
+// console.log(findMin([5,13,78,55,87,65,122,63]));
+
+
+// for finding Maximum from an array
+// function findMin(arr) {
+//     return arr.reduce((prev, curr) => {
+//        return prev > curr ? prev:curr;
+//     })
+// }
+
+// console.log(findMin([5,13,78,55,87,65,122,63]));
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// 17. write a function to convert a string to camelCase or snake_case.
+
+// function camelCaseString(str) {
+//     arr = str.split(' ');
+//     arr1 = arr.map((elem, index) => {
+//         if(index == 0){
+//             return elem;
+//         }
+//         else {
+//             return elem.charAt(0).toUpperCase() + elem.slice(1, elem.length);
+//         }
+//     })
+//     return arr1.join('');
+// }
+// console.log(camelCaseString('hello world sagar'));
+
+
+// function snake_case_string(str) {
+//     return str.split(' ').join('_') 
+// }
+
+// console.log(snake_case_string('hello world sagar'));
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// 18. write a function to check given character is lowercase or uppercase.
+
+// function isUpperCase(char) {
+//    return char.toUpperCase() === char ? true:false;
+// }
+// console.log(isUpperCase('s')); //false
+
+
+// function isLowerCase(char) {
+//     return char.toLowerCase() === char ? true:false;
+// }
+// console.log(isLowerCase('d')); // true
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// 19. write a function to check weather given string is strats with a specific substring.
+
+// function checkStarts(str, subStr) {
+//     let arr = str.split(' ');
+//     return arr[0] === subStr ? true : false;
+
+// //OR
+
+//     return str.slice(0, subStr.length) === subStr.toLowerCase();
+// }
+
+// console.log(checkStarts('hello world sagar', 'hello')); //true
+// console.log(checkStarts('my name is sagar', 'name'));  //false
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// 20. write a function to reverse a string without using any inbuilt method or libraries.
+
+// function reverseStr(str) {
+//     let revStr = '';
+//     for (let i = str.length-1; i >= 0; i--) {
+//         revStr += str[i]
+//     }
+//     return revStr
+// }
+
+// console.log(reverseStr('hello'));
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
