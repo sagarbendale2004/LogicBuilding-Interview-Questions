@@ -313,5 +313,62 @@
 
 //----------------------------------------------------------------------------------------------------------------------------------------
 
+// 21. write a function called calculateMean that must take an array of numbers as input and returns the mean Average of that numbers.
 
+// function calculateMean(arr) {
+//     let sum =  arr.reduce((prev, curr) => prev + curr)
+//     return sum / arr.length;
+// }
 
+// console.log(calculateMean([1,2,3,4,5]));  //basically Mean means center value - 3
+// console.log(calculateMean([10,20,30,40,50,60,70]));  // 40
+// console.log(calculateMean([10,20]));  
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// 22. write a javascript function to find median that takes an array as an input and returns the median value . if the array has even number of elements, return the average of two middle values.
+
+// function findMedian(arr) {
+//     let arrSort = arr.sort((a,b) => a-b);
+//     let med = Math.floor(arrSort.length / 2)
+//     return arrSort.length % 2 === 0 ? (arr[med] + arr[med-1]) / 2 : arr[med];
+// }
+
+// console.log(findMedian([2,3,5,7,8,9,4])); // 5 bcz we sort array [2,3,4,5,7,8,9]
+// console.log(findMedian([2,4,6,8])); //5
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// 23. write a javascript function to count the occurances of each element in an array and store the counts in an objects.the keys of the object  should represent the elements of the array , and the value should represents the number of times each element appears in the array.
+
+// function countOccurance(arr) {
+//     let obj = {}
+//     arr.forEach(elem => {
+//         obj[elem] = (obj[elem] || 0) + 1;
+//     });
+//     return obj
+// }
+
+// console.log(countOccurance([1,1,1,2,3,4,55,4,7])); // { '1': 3, '2': 1, '3': 1, '4': 2, '7': 1, '55': 1 }
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// 24. write a function called find mode that takes an array of numbers as input and return the mode of the array (the no. that apperas more frequently)
+
+// function findMode(arr) {
+//     let obj = {}
+//     let maxNum = 0
+//     let mode;
+//     let sortArr = arr.sort((a,b) => a-b)
+//     sortArr.forEach(elem => {
+//         obj[elem] = (obj[elem] || 0) + 1;
+//         if(obj[elem] > maxNum) {
+//             maxNum = obj[elem]
+//             mode = elem
+//         }
+//     });
+//     return mode
+    
+// }         
+
+// console.log(findMode([1,1,4,5,1,7,2])); //2
