@@ -372,3 +372,98 @@
 // }         
 
 // console.log(findMode([1,1,4,5,1,7,2])); //2
+
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// 25. write a function to calculate the factorial of the number (using recursion)
+
+// function factorialRecursion(num) {
+//     if(num === 1) {
+//         return 1;
+//     }
+//     else {
+//         return num * factorialRecursion(num - 1);
+//     }
+
+// }
+// console.log(factorialRecursion(5));
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 26. write a function to to find nth fibonacci number.
+
+// function findFibo(num) {
+//     if(num <= 1) {
+//         return num
+//     }
+//     else {
+//         return findFibo(num-1) + findFibo(num - 2)
+//     }
+// }
+
+// console.log(findFibo(5));
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 27. write a function called repeatString that takes two parameters:
+
+// function repeatString(str, num) {
+//     let arr = [];
+//     for (let i = 1; i <= num; i++) {
+//        arr.push(str);
+//     }
+//     return arr.join('');
+
+//     OR
+
+//     return str.repeat(num)
+// }
+
+// console.log(repeatString('abc', 5));  //abcabcabcabcabc
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 28. write a function called truncateString that takes two parameters.
+
+// function truncateString(str, num) {
+//     if(num === 0) {
+//         return str;
+//     }
+//     else return str.substring(0, num)
+// }
+
+// console.log(truncateString('A-Tasket, a-Tasket a green and yellow basket ', 8));  // A-Tasket
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 29. write a function called numberRange that genrates an array containing consecutive numbers from a to b (inclusive)
+
+// function numberRange(num1, num2) {
+//   let arr = [];
+//   if (num1 <= num2) {
+//     for (let i = num1; i <= num2; i++) {
+//       arr.push(i);
+//     }
+//   }
+//   return arr;
+// }
+
+// console.log(numberRange(10, 5)); // [0,1,2,3,4,5]
+// console.log(numberRange(-2, 2)); // [-2,-1,0,1,2]
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 30. write a function called numberRange that genrates an array containing consecutive numbers from a to b (Using Recursion)
+
+// function numberRangeRecursive (num1, num2, arr = []) {
+//     if(num1<=num2) {
+//         arr.push(num1);
+//         return numberRangeRecursive(num1 + 1, num2, arr)
+//     }
+//     return arr
+// }
+
+// console.log(numberRangeRecursive(1,5)); // [1,2,3,4,5]
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
