@@ -467,3 +467,75 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+// 31. write a function called simplePasswordValidator that takes a single parameter.
+        //password must contain a one lowercase, one uppercase, and one digit. it length should be atleast 8 characters.
+
+// function simplePasswordValidator(str) {
+//     let lowerCaseLetters = /[a-z]/g;
+//     let upperCaseLetters = /[A-Z]/g;
+//     let digit = /[0-9]/g;
+
+//     if(str.length >= 8 && str.match(lowerCaseLetters) && str.match(upperCaseLetters) && str.match(digit)) {
+//         return true;
+//     } 
+//     else {
+//         console.log('Password should must be Minimum 8 character long');
+//         return false;
+//     }
+// }
+
+// console.log(simplePasswordValidator('a1dsaass')); // false
+// console.log(simplePasswordValidator('as123SdsSA')); // true
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 33. write a function randomHexColor that generates a random hexadecimal color code each time it is called. the function should return a string representing the random color code in the format '#RRGGBB', Where RR, GG, BB are two-digit hexadecimal numbers representing the red, green, blue components of the color, respectively. its length must be 7.
+
+// function randomHexColor() {
+//         let arr = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'];
+//         let res = '#'
+//         for (let i = 0; i < 6; i++) {
+//                 let randomIndex = Math.floor(Math.random() * arr.length);
+//                 res += arr[randomIndex]
+//         }
+//         return res
+
+// }
+
+// console.log(randomHexColor()) //#c5e897
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 34. write a function removeDuplicates that takes an array of elements as input and returns a new array with duplicate elements removed.
+
+// function removeDuplicates(arr) {
+//         return arr.filter((elem, index) => {
+//                return arr.indexOf(elem) === index; 
+//         })
+// }
+
+// console.log(removeDuplicates([2,3,4,33,5,2,3,6,4,3])); // [ 2, 3, 4, 33, 5, 6 ]
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 35. write a function isEmptyObject that takes an object as input and determines weather it is empty or not. An empty object is defined as an object with no own properties.
+
+// function isEmptyObject(obj) {
+//         for (const key in obj) {
+//                 if (obj.hasOwnProperty(key)) {
+//                         return 'not empty'
+//                 }
+//         }
+//          return 'empty'
+
+//         //OR
+
+//         return Object.keys(obj).length === 0
+// }
+
+// console.log(isEmptyObject({ name : 'sagar'})); // not empty
+// console.log(isEmptyObject({ key : null})); // not empty
+// console.log(isEmptyObject({})); // it is empty
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
