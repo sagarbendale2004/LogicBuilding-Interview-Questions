@@ -539,3 +539,94 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+// 36. write a function objectToArray that takes an object as input and return an array if key-value pairs, where each element in the array is an array with two elements.  (Object To Array)
+
+// function objectToArray(obj) {
+//         return Object.entries(obj)
+// }
+
+// console.log(objectToArray({
+//         name : 'sagar',
+//         location: 'jalgaon',
+//         birthdate: 5
+// }));
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 37. write a function arrayToObject that takes an array as input and return an new Object of key-value pairs. (Array to Object)
+
+// function arrayToObject(arr) {
+//         let entries = Object.entries(arr);
+//         return Object.fromEntries(entries)
+// }
+
+// console.log(arrayToObject(['name', 'sagar', 'location', 'nashik']));
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 38. write a function calculateSimpleIntrest thar calculates the simple intrest given the principal ammount, rate of intrest per annum, and time in years.
+
+// function calculateSimpleIntrest(principalAmt, intrestRate, time) {
+//         let simpleIntrest = (principalAmt * intrestRate * time) / 100;
+//         return simpleIntrest
+// }
+
+// console.log(calculateSimpleIntrest(1000, 5, 3));
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 39. write a function calculateDaysBetweenDates that calculates the number of days between two dates. the dates will be provided in the format 'YYYY-MM-DD'.
+
+// function calculateDaysBetweenDates(d1, d2) {
+//         let date1 = new Date(d1);
+//         let date2 = new Date(d2);
+
+//         let diff = date2 - date1;
+//         return diff / (24*60*60*1000)
+// }
+
+// console.log(calculateDaysBetweenDates('2024-01-01', '2024-01-31'));
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 40. create a function calculateAge that takes a birthdate ad input and returns the current age of the person. the birthdate will be provided in the format 'YYYY-MM-DD'.
+
+// function calculateAge(d1) {
+//         let birthDate = new Date(d1);
+//         let currDate = new Date();
+
+//         let age = currDate.getFullYear() - birthDate.getFullYear();
+//         let monthDiff = currDate.getMonth() - birthDate.getMonth();
+//         if(monthDiff < 0 || (monthDiff === 0 && currDate.getDate() < birthDate.getDate())){
+//                 age--;
+//         }
+//         return age;
+// }
+
+// console.log(calculateAge('2004-03-04'));
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 41. create a function genrateBarChart that takes an array of numbers as input and genrates a simple text-based bar chart.
+
+// function genrateBarChart(arr) {
+//   let newArr = arr.map((currElem, index) => {
+//     let number = 0;
+//     let star = "";
+//     while (number < currElem) {
+//       star = star + "*";
+//       number++;
+//     }
+//     return `${index + 1} : ${star}`;
+//   });
+//   return newArr.join("\n");
+// }
+
+// console.log(genrateBarChart([5, 1, 6, 2]));
+
+// *****
+// ****
+// ******
+// **
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
