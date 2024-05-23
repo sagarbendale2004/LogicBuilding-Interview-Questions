@@ -630,3 +630,115 @@
 // **
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 42. write a function to convert an ammount from one currency to another using static exchange rates.
+// req1 -
+// write a function convertCurrency that takes 3 parameters ammount, fromCurrency, toCurrency. use a fixed object to store exchange rates relative to base currency.
+
+// const rates = {
+//     USD: 1, // base Currency
+//     EUR:  0.9, // 1USD = 0.9EUR
+//     GBP:  0.8, // 1USD = 0.8GBP
+//     INR: 83, //1USD = 83INR
+// }
+
+// function convertCurrency(ammount, fromCurrency, toCurrency) {
+//     let ammountInUsd = 0;
+//     if(fromCurrency !== 'USD') {
+//         ammountInUsd = ammount / rates[fromCurrency];
+//     }
+//     else {
+//         ammountInUsd = ammount;
+//     }
+
+//     let convertedAmmount = 0;
+//     if(toCurrency !== 'USD') {
+//         convertedAmmount = ammountInUsd * rates[toCurrency]
+//     }
+//     else {
+//         convertedAmmount = ammountInUsd;
+//     }
+//     return  convertedAmmount
+// }
+
+// console.log(convertCurrency(100, 'GBP', 'EUR'));
+// console.log(convertCurrency(100, 'INR', 'EUR'));
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 43. write a function to validate credit card numbers using the Luhn Algorithm.
+
+//* Luhn Algorithm steps:
+// prepare the Number:
+// start with the digits of the number. if validating number 79927398713
+// reverse the digits of the number for ex. it becomes 31789372997
+// double every second digits:
+// starting from the first digits, double every second digit:
+// for ex. 3, 1*2, 7, 8*2, 9, 3*2, 7, 2*2, 9, 9*2, 7
+// which translates to 3,2,7,16,9,6,7,4,9,18,7
+// substract 9 from numbers higher than 9:
+// now our series - 3,2,7,7,9,6,7,4,9,9,7
+// sum all digits:
+// add all the digits together:
+// check modulo 10
+// if the sum modulo 10 is 0, then the number is valid according to the luhn formula:
+// 66 % 10 = 6, which is not 0, so 79927398713 is not a valid number according to Luhn
+
+
+// function validateCreditCard(str) {
+//   let reversNumber = str.split("").reverse().join("").split(" ").join("").split("");
+//   let doubleNum = reversNumber
+//     .map((curr, index) => {
+//       if (index % 2 !== 0) {
+//         curr = curr * 2;
+
+//         if (curr > 9) {
+//           curr = curr - 9;
+//         }
+//       }
+//       return curr;
+//     })
+//     .reduce((prev, curr) => prev + Number(curr), 0);
+//   return doubleNum % 10 === 0;
+// }
+
+// console.log(validateCreditCard("4539 1488 0343 6467")); //true
+// console.log(validateCreditCard("8273 1232 7352 0569")); //false
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 44. write a function fizzbuzz that accepts two numbers and endvalues, as input, the function should return an array containingnumbers and specific strings based on the following rules: 
+
+// for each num i in the range from startNum and endNum
+// if i is divisible by both 3 and 5 include 'fizzbuzz' in result
+// if i is divisible by only 3 then include 'fizz' in result
+// if i is divisible by only 5 then include 'buzz' in result
+// otherwise, include the number i itself.
+
+
+// function fizzbuzz(start, end) {
+//     let arr = [];
+//     for (let i = start; i <= end; i++) {
+//         if(i % 3 == 0 && i % 5 == 0){ 
+//             arr.push('fizzbuzz')
+//         }
+//         else if(i % 3 == 0) {
+//             arr.push('fizz')
+//         }
+//         else if(i % 5 == 0) {
+//             arr.push('buzz')
+//         }
+//         else {
+//             arr.push(i)
+//         }
+//     }
+//     return arr
+// }
+
+// console.log(fizzbuzz(1, 15));
+// {1,2,'fizz',4,'buzz','fizz',7,8,'fizz','buzz',11,'fizz',13, 14, 'fizzbuzz'}
+//console.log(fizzbuzz(12, 20));
+// {'fizz',13,14,'fizzbuzz',16,17,'fizz',19,'buzz'}
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
