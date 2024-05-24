@@ -742,3 +742,62 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+// 45. write a function to validate email address using regular Expression.
+
+// function validateEmail(email) {
+//     return /^[A-Za-z0-9]+(?:[.+_%] [A-Za-z0-9]+)*@[A-Za-z0-9]+\.[A-Za-z]{2,}$/.test(email);
+// }
+
+// console.log(validateEmail('sagar@mail.com')); //true
+// console.log(validateEmail('sagar2004@gmail.com')); //true
+// console.log(validateEmail('sagar..bendale@mail.com')); //false;
+
+// Explaination : /^ -start , $/ -end
+// [A-Za-z0-9] means your email contains at least one char from Capital,smaller, number
+// (?:[.+_%] [A-Za-z0-9]+) this part is basically for containg any of the [._%+] if present then fine if absent then also fine, not cumpulsory.
+//  if we cannot give any sign after square bracket then the particular [ ] should comes only onces. bcz we use *
+// @ is compalsory so it adds by default.
+// \.[A-Za-z]{2,} this says we add . by default and lastly in curly bases we defines range means after . minimum 2 char is present.
+// and lastly we call test function and give them our email for validation.
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 46. create a function validPassword that checks if given password string meets the following criteria. (use Reg Ex.)
+
+// 1. password should be atleast 8 char long.
+// 2. password should contain atleast one uppercase and one lowercase and contains atleast one digit.
+// 3. password must contain any special case character.
+
+// function validatePassword(password) {
+//     return /^(?=.*[A-Z])(?=.*[a-z])(?=.*[\d])(?=.*[\W_]).{8,}$/.test(password)
+// }
+
+// console.log(validatePassword('saGarBendale02@*')); //true
+// console.log(validatePassword('jhjahjs12%')); //false
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 47. write a function that takes a string as input and returns true if string represents the valid indian mobile number or false otherwise.
+
+// number should always starts from 6,7,8,9 which are valid starting number in india
+
+// function validateMobileNum(number) {
+//     return /^[6-9][0-9]{9,}$/.test(number);
+// }
+// console.log(validateMobileNum('7666852351')); //true
+// console.log(validateMobileNum('1378990341')); //false
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 48. write a regular expression to extract all numbers from a given string.
+
+// function extractNum(str) {
+//     let regex = /[0-9]+/g;
+//     return str.match(regex);
+// }
+
+// console.log(extractNum('Sa23gar553bendale58')); // [23,553,58]
+// console.log(extractNum('2345sa6ga7r90')); // [2345,6,7,90]
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
