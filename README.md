@@ -1,1 +1,1 @@
-# LogicBuilding-Interview-Question
+# LogicBuilding50-Interview-Questions
