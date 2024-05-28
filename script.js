@@ -801,3 +801,46 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+// 49. Implement a debounce function in JavaScript that limits the frequency of a function’s execution when it’s called repeatedly within a specified time frame. 
+
+// function debounce(func, delay) {
+//     let timerId;
+    
+//     return function() {
+//       clearTimeout(timerId);
+//       timerId = setTimeout(() => {
+//         func.apply(this, arguments);
+//       }, delay);
+//     };
+//   }
+  
+//   function myFunction() {
+//     console.log('Function executed');
+//   }
+  
+//   const debouncedFunction = debounce(myFunction, 3000);
+  
+//   // This will trigger the function only once after 3000ms
+//   debouncedFunction();
+//   debouncedFunction();
+//   debouncedFunction();
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 50. Write a function that takes an array of objects and a key, and returns a new array sorted based on the values of that key in ascending order. 
+
+//   function sortByKey(arr, key) {
+//     return arr.slice().sort((a,b) => a[key] - b[key]);
+//   }
+
+//   const array = [
+//     { name: "John", age: 25 },
+//     { name: "Alice", age: 30 },
+//     { name: "Bob", age: 20 }
+//   ];
+  
+//   const sortedArray = sortByKey(array, 'age');
+//   console.log(sortedArray);
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
