@@ -39,7 +39,7 @@
 //     let arr = str.split('');
 //     arr.forEach(elem => {
 //         if(elem === char){
-//             count++;
+//             count = count + 1;
 //         }
 //     });
 //     return count;
